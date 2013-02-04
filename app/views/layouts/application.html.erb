@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= render :partial => 'layouts/head' %>
+
+  </head>
+  <body>
+
+    <%= render 'layouts/top-nav' %>
+      <%= bootstrap_flash %>
+    <%= yield :pre_container %>
+
+    <div class="container">
+      <br/>
+      <%= content_for?(:content) ? yield(:content) : yield %>
+
+    </div> <!-- /container -->
+
+
+    <footer>
+      <div class="container">
+<!--          <p>&copy; Prever Canada Inc. 2012 </p>  -->
+<!--          | <%= link_to "Terms of Service", terms_path %> | <%= link_to "Privacy Policy", privacy_path %>
+ -->      </div>
+    </footer>
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= yield :prescripts %>
+    <%= javascript_include_tag "application" %>
+    <%= yield :scripts %>
+
+  </body>
+</html>

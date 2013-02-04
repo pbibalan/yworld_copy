@@ -1,0 +1,131 @@
+@import "twitter/bootstrap/bootstrap";
+
+
+
+.content{
+	min-height:500px;
+}
+.form-actions {
+	background-color: transparent;
+}
+
+.padded-row{
+	padding:100px 0;
+}
+
+.xlarge-text{
+	font-size: 120px;
+	line-height: 80px;
+}
+.large-text{
+	font-size: 48px;
+	line-height: 48px;
+}
+.medium-text{
+	font-size: 32px;
+}
+
+@import "twitter/bootstrap/responsive";
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 1199px) {
+	.xlarge-text{
+		font-size: 60px;
+	}
+	.large-text{
+		font-size: 40px;
+	}
+
+}
+
+@media (min-width: 979px) { 
+	body{
+		padding-top: 40px;
+	}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+	
+
+	.padded-row{
+		padding: 60px 0;
+	}
+	.navbar-fixed-top {
+		margin-bottom: 0;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+	
+	.xlarge-text{
+		font-size: 72px;
+	}
+	.large-text{
+		font-size: 32px;
+	}
+	.medium-text{
+		font-size: 24px;
+	}
+	
+	.padded-row{
+		padding: 30px 0;
+	}
+	
+	.navbar-fixed-top {
+		margin-bottom: 0;
+	}
+	.masthead {
+		text-align: center;
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+
+	.masthead .container{
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.padded-row{
+		padding: 0;
+	}
+
+}
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings");
+@iconWhiteSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings-white");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+// Note: If you use asset_path() here, your compiled boostrap_and_overrides.css will not
+//       have the proper paths. So for now we use the absolute path.
+@fontAwesomeEotPath: asset-path("fontawesome-webfont.eot");
+@fontAwesomeWoffPath: asset-path("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-path("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-path("fontawesome-webfont.svg");
+
+// Font Awesome
+@import "fontawesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;

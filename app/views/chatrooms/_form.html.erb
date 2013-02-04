@@ -1,0 +1,12 @@
+
+
+<%= simple_form_for @chatroom, :html => { :class => 'form-horizontal', :name => 'new_chatroom' } do |f| %>
+
+
+  <%= f.input :collaboration_id %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                chatrooms_path, :class => 'btn' %>
+  </div>
+<% end %>

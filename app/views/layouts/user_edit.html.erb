@@ -1,0 +1,10 @@
+
+<% content_for :content do %>
+	<div class="btn-group">
+	      <%= link_to "Edit", edit_user_registration_path, class: 'btn' %>
+	      <%= link_to "Personal Information", '/user_steps/personal', class: 'btn' %>
+	      <%= link_to "Billing Information", '/user_steps/billing' , class: 'btn' %>
+	</div>
+	<%= yield %>
+<% end %>
+<%= render :template => 'layouts/application' %>

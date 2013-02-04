@@ -1,0 +1,184 @@
+// Place all the styles related to the static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#mapholder {
+  width: 230px;
+  height: 230px; 
+}
+
+
+.masthead {
+padding: 70px 0 80px;
+margin-bottom: 0;
+height: 420px;
+}
+.hero {
+position: relative;
+padding: 70px 0px 40px 0px;
+
+background: url(/assets/hero.jpg) repeat-y center -50px;
+
+}
+#hero-text{
+	text-align: center;
+	color: white;
+	text-shadow: 0 3px 3px rgba(0, 0, 0, .5), 0 0 30px rgba(0, 0, 0, .1);
+
+}
+
+#laptop-div{
+	position:relative;
+}
+
+#intro-laptop{
+	position: absolute;
+	left: -100px;
+	bottom: -430px;
+}
+
+
+
+#call_to_action{
+	z-index: 10;
+	position: absolute;
+	text-align: left;
+	color: white;
+}
+.call_to_action_text{
+	margin-top: 40px;
+		text-shadow: 0 2px 2px rgba(0, 0, 0, .5), 0 0 30px rgba(0, 0, 0, .1);
+}
+
+#call_to_action .btn{
+	font-size: 24px;
+}
+
+#request_form{
+	padding: 30px;
+	float:right;
+}
+
+
+.fb-like{
+	position:relative;
+	top: -3px;
+}
+.social_button{
+	width: 25%;
+	float:left;
+}
+.social_media_row{
+	height: 25px;
+	padding: 15px 0;
+	text-align: center;
+	background-color: whiteSmoke;
+	border-top: 1px solid white;
+	border-bottom: 1px solid #DDD;
+}
+
+footer {
+	padding: 50px 0;
+	margin-top: 50px;
+	border-top: 1px solid #E5E5E5;
+	background-color: whiteSmoke;
+	//background-color: #325a8e;
+	color: white;
+}
+
+
+#footer_social_media a{
+	float:right;
+	margin-left: 10px;
+}
+
+#badge_div{
+	position: relative;
+}
+
+#upload_action table .btn-mini{
+ margin: 5px 0;
+}
+
+.padded-row{
+	padding: 100px 0;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 1199px) {
+	#intro-laptop{
+		width: 800px;
+	}
+	#call_to_action .btn{
+		font-size: 20px;
+	}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+	
+	#intro-laptop{
+		width: 650px;
+	}
+	.masthead {
+		height: 360px;
+		padding: 30px 0 30px;
+	}
+	
+	#intro-laptop{
+	bottom: -370px;
+
+	}
+
+	#call_to_action{
+			top: 70px;
+	}
+	#call_to_action .btn{
+		font-size: 16px;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+	
+	.masthead {
+		height: auto;
+	}
+	
+	.hero {
+		padding: 20px 0px 20px 0px;
+	}
+	
+	#intro-laptop{
+		position: static;
+
+	}
+
+	#call_to_action{
+		
+		position: static;
+	}
+	
+	.call_to_action_text{
+		margin-top: 10px;
+	}
+	
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.padded-row{
+		padding: 0;
+	}
+	
+	
+
+}
+
+
+

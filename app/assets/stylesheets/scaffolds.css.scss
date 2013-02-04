@@ -1,0 +1,42 @@
+#notice {
+  color: green; }
+
+.field_with_errors {
+	input{
+		color: #B94A48;
+		border-color: #B94A48;
+	}
+	input:focus{
+	  border-color: #953b39;
+	  -webkit-box-shadow: 0 0 6px #d59392;
+	  -moz-box-shadow: 0 0 6px #d59392;
+	  box-shadow: 0 0 6px #d59392;
+	}
+}
+
+#error_explanation {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 18px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color: #FCF8E3;
+	border: 1px solid #FBEED5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #F2DEDE;
+	border-color: #EED3D7;
+	color: #B94A48;
+	
+  h2 {
+		color: #B94A48;
+    text-align: center;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+		}
+  ul li {
+    font-size: 12px;
+		text-align: left;
+    }
+
+}

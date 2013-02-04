@@ -1,0 +1,68 @@
+<% content_for :scripts do %>
+	<script src="http://deepspace.yworld.com/site/js/libs/websocket.js"></script>
+	<script>
+		MyWebSocket=new ShareServer({
+			uid:document.test.uid.value,
+			crypto:document.test.crypto.value,
+			// contact_callback:function(m,p){alert(m+' '+p);}
+		})
+
+		var cid=document.test.cid.value; 
+		
+		var param={
+			CollaborationID:cid,
+			id_callback:function(id){
+				document.test.cid.value=cid=id;
+				$("#chatroom_collaboration_id").attr("value", cid);
+			},
+			participant_callback:function(obj){
+				// for(var count=0;count<obj.lenth;count++){
+				// 	alert('UID: '+obj[count].uid+' Permission: '+obj[count].Permission);
+				// }
+			}
+		};
+
+		if(document.test.cid.value.length==0){param.CollaborationID=null;}
+
+		MyWebSocket.Register(param);
+
+
+	</script>
+<% end %>
+
+<form name="test" onsubmit='return false;' class="form-horizontal">
+	<div class="control-group">
+		<div class="control-label">
+			UID 
+		</div>
+		<div class="controls">
+			<%= text_field_tag :uid, current_user.uid %>
+		</div>
+	</div>
+
+	<div class="control-group">
+			<div class="control-label">
+				Collaboration ID
+			</div>
+			<div class="controls">
+				<%= text_field_tag :cid %>
+			</div>
+	</div>
+
+	<div class="control-group">
+		<div class="control-label">
+			Crypto
+		</div>
+		<div class="controls">
+			<%= text_field_tag :crypto, current_user.crypto %>
+							
+		</div>
+	</div>
+</form>
+
+<%- model_class = Chatroom -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => t('helpers.titles.new', :model => model_class.model_name.human,
+                                 :default => "New #{model_class.model_name.human}") %></h1>
+</div>
+<%= render :partial => 'form' %>

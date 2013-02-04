@@ -1,0 +1,90 @@
+<% content_for :pre_container do %>
+<div class="hero masthead" id="home">
+  
+    <div class="container">
+      <div class="row">  
+            <div class="span12" id="hero-text">
+              <h1><strong>Location Aware Chatting Service</strong></h1>
+            </div>
+      </div>
+      
+      <div class="row" id="call_to_action">
+        <div class="container" id="laptop-div">
+            <%= image_tag "intro-laptop.png", id: "intro-laptop" %>
+        </div>
+        <div class="span5 offset7" >
+          <div class="call_to_action_text">
+            <br/>
+              <h3>Chat with your friends while tracking their location in real-time.</h3><br>
+
+          </div>
+          <div>
+            <center>
+            <%= link_to "Sign In", new_user_session_path, class: "btn btn-large btn-info" %>
+          </center>
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  
+</div>
+
+<% end %>
+
+<div class="row">
+  <div class="span8">
+  <div class="hero-unit">
+  <h1> Steps </h1>
+    <p>
+    <code>
+      <ol class="linenums">
+        <li> Sign in with username: user{i}@yworld.com and password: 123456 where i = 1 ... 20. </li>
+        <li> Join an existing chatroom page (or create a new one). </li>
+        <li> Do the above steps with another browser or a GPS enabled device (have been tested with android nexus 7).</li>
+        <li> Start chatting. Users' location is broadcasted and updated on the map each time the user moves more than 1 meters. </li>
+
+      </ol>
+
+    </code>
+    </p>
+  </div>
+  </div>
+
+  <div class="span4">
+    <br/><br/><br/><br/><br/>
+    <center>
+    <h3> Powered by </h3> <%= image_tag 'yworld-logo.png', alt: "yworld-log" %>
+    </center>
+  </div>
+
+</div>
+
+
+ 
+ <!--    <div class="row" class="benefits padded-row">
+      <br>
+      <div class="span3">      
+        <h2 class="light-text"><i class="icon-thumbs-up"></i> Worry Free </h2>
+        <p> </p>
+      </div>
+      
+      <div class="span3">      
+        <h2 class="light-text"><i class="icon-thumbs-up"></i> Time Saving </h2>
+        <p> </p>
+      </div>
+      
+      <div class="span3">      
+        <h2 class="light-text"><i class="icon-thumbs-up"></i> Reliable </h2>
+        <p> </p>
+      </div>
+
+      <div class="span3">      
+        <h2 class="light-text"><i class="icon-lock"></i> Secure</h2>
+        <p>Powered by PCI Compliant Stripe Credit Card processing to ensure maximum security of your credit card.</p>
+      </div>
+      
+  
+    </div>
+ -->
